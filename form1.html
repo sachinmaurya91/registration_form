@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    }
+
+    .container {
+        width: 400px;
+        margin: 40px auto;
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px gray;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0 15px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .gender, .dept {
+        margin-bottom: 15px;
+    }
+
+    .gender input, .dept input {
+        width: auto;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background: #ff4b5c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #e63946;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>*--Registration Form--*</h1>
+
+    <form method="post">
+
+        <label>Roll No:</label>
+        <input type="number" required>
+
+        <label>Student Name:</label>
+        <input type="text" required>
+
+        <label>Father Name:</label>
+        <input type="text" required>
+
+        <label>Mother Name:</label>
+        <input type="text" required>
+
+        <label>Date of Birth:</label>
+        <input type="date" required>
+
+        <label>Mobile No:</label>
+        <input type="tel" pattern="[0-9]{10}" placeholder="10 digit number" required>
+
+        <label>Email:</label>
+        <input type="email" required>
+
+        <label>Password:</label>
+        <input type="password" minlength="6" required>
+
+        <div class="gender">
+            <label>Gender:</label><br>
+            <input type="radio" name="gender" required> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+        </div>
+
+        <label>Course:</label>
+        <select required>
+            <option value="">--Select course--</option>
+            <option>BCA</option>
+            <option>MCA</option>
+            <option>B.Tech</option>
+            <option>M.Tech</option>
+            <option>B.Sc CS</option>
+            <option>BA</option>
+            <option>MBA</option>
+        </select>
+
+        <div class="dept">
+            <label>Department:</label><br>
+            <input type="checkbox"> CSE
+            <input type="checkbox"> IT
+            <input type="checkbox"> Electrical
+            <input type="checkbox"> Civil
+        </div>
+
+        <label>Student Photo:</label>
+        <input type="file" accept="image/*">
+
+        <label>City:</label>
+        <input type="text" required>
+
+        <label>Address:</label>
+        <textarea rows="3" required></textarea>
+
+        <!-- ✅ FIXED SUBMIT BUTTON -->
+        <button type="submit">Register</button>
+
+    </form>
+</div>
+
+</body>
+</html>
